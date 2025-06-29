@@ -4,29 +4,29 @@
 
 PTG Forge is an AI-powered prompt-to-Gazebo tool that enables engineers—especially those at Fanuc or in automotive manufacturing—to generate complete robot simulation environments using simple text prompts. The tool converts natural language into `.world`, `.urdf`, and `.launch.py` files for ROS2/Gazebo, drastically speeding up robot cell layout prototyping and testing.
 
-## 📝 Key Features
+## Key Features
 
-- **Natural language to .world scene generation**
-- **Prompt-based URDF creation** for Fanuc robots and other components
-- **Auto-generation of ROS2 .launch.py files**
-- **One-click export** of all config files in a ZIP bundle
-- **Simple, professional web UI** with real-time generation
+- Natural language to .world scene generation
+- Prompt-based URDF creation for Fanuc robots and other components
+- Auto-generation of ROS2 .launch.py files
+- One-click export of all config files in a ZIP bundle
+- Simple, professional web UI with real-time generation
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Frontend:** TailwindCSS, React (Next.js, shadcn/ui)
-- **AI Builders:** Cursor, Trae AI, Firebase Studio
-- **Backend / Logic:** GPT-4/LLM for prompt interpretation, file generation templates
-- **Simulation:** ROS2, Gazebo, URDF, RViz (optional for visualization)
-- **Hosting/Deployment:** Firebase, HuggingFace Spaces, or Replit
+- Frontend: TailwindCSS, React (Next.js, shadcn/ui)
+- AI Builders: Cursor, Trae AI, Firebase Studio
+- Backend / Logic: GPT-4/LLM for prompt interpretation, file generation templates
+- Simulation: ROS2, Gazebo, URDF, RViz (optional for visualization)
+- Hosting/Deployment: Firebase, HuggingFace Spaces, or Replit
 
-## 🚀 Example Use Case
+## Example Use Case
 
 > "Simulate two Fanuc LR Mate robots welding on either side of a car chassis inside a 6x6m cell."
 >
 > The system generates a `.world` file with correct model placements, URDFs for the arms, and a ROS2 launch file that initializes the scene.
 
-## 👤 Target Users
+## Target Users
 
 - Robotics engineers and developers
 - Manufacturing simulation teams
@@ -35,24 +35,24 @@ PTG Forge is an AI-powered prompt-to-Gazebo tool that enables engineers—especi
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18.18.0 or higher (recommended: Node.js 20+)
 - npm 9.0.0 or higher
 - Google AI API key for Genkit integration
 
-## 🚀 Quick Start
+## Quick Start
 
-1. **Clone the repository**
+1. Clone the repository
    ```bash
    git clone <repository-url>
    cd PTG-Forge
    ```
-2. **Install dependencies**
+2. Install dependencies
    ```bash
    npm install
    ```
-3. **Set up environment variables**
+3. Set up environment variables
    ```bash
    cp env.example .env.local
    ```
@@ -61,14 +61,14 @@ PTG Forge is an AI-powered prompt-to-Gazebo tool that enables engineers—especi
    GOOGLE_AI_API_KEY=your_google_ai_api_key_here
    NEXT_PUBLIC_APP_URL=http://localhost:9002
    ```
-4. **Start the development server**
+4. Start the development server
    ```bash
    npm run dev
    ```
-5. **Open your browser**
+5. Open your browser
    Navigate to [http://localhost:9002](http://localhost:9002)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PTG-Forge/
@@ -90,7 +90,7 @@ PTG-Forge/
 └── public/                # Static assets
 ```
 
-## 🎯 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server with Turbopack
 - `npm run build` - Build for production
@@ -102,16 +102,16 @@ PTG-Forge/
 - `npm run clean` - Clean build artifacts and dependencies
 - `npm run reinstall` - Clean and reinstall dependencies
 
-## 🔧 Configuration Files
+## Configuration Files
 
-- **`next.config.ts`** - Next.js configuration with optimizations
-- **`tailwind.config.ts`** - Tailwind CSS with custom theme
-- **`tsconfig.json`** - TypeScript configuration
-- **`components.json`** - shadcn/ui configuration
-- **`.eslintrc.json`** - ESLint rules
-- **`.prettierrc`** - Prettier formatting rules
+- `next.config.ts` - Next.js configuration with optimizations
+- `tailwind.config.ts` - Tailwind CSS with custom theme
+- `tsconfig.json` - TypeScript configuration
+- `components.json` - shadcn/ui configuration
+- `.eslintrc.json` - ESLint rules
+- `.prettierrc` - Prettier formatting rules
 
-## 🔒 Environment Variables
+## Environment Variables
 
 Create a `.env.local` file with the following variables:
 
@@ -126,7 +126,7 @@ NODE_ENV=development
 NEXT_TELEMETRY_DISABLED=1
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 1. Connect your repository to Vercel
@@ -140,7 +140,7 @@ The app can be deployed to any platform that supports Next.js:
 - DigitalOcean App Platform
 - AWS Amplify
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -148,19 +148,19 @@ The app can be deployed to any platform that supports Next.js:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## Support
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/your-repo/issues) page
+1. Check the Issues page
 2. Create a new issue with detailed information
 3. Include your Node.js version and error logs
 
-## 🔄 Updates
+## Updates
 
 To update dependencies:
 ```bash
@@ -168,8 +168,8 @@ npm update
 npm audit fix
 ```
 
-For major updates, check the [CHANGELOG](CHANGELOG.md) for breaking changes.
+For major updates, check the CHANGELOG for breaking changes.
 
 ---
 
-Built with ❤️ by the PTG Forge Team
+Built with love by the PTG Forge Team
