@@ -1,102 +1,82 @@
 # PTG Forge
 
-AI-powered prompt-to-Gazebo tool for robotics engineers. Instantly generate complete ROS2/Gazebo simulation environments—including `.world`, `.urdf`, and `.launch.py` files—using natural language prompts. Perfect for rapid robot cell prototyping in manufacturing and robotics engineering.
+<p align="left">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+  <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js 15" />
+  <img src="https://img.shields.io/badge/ROS2-Humble-blue" alt="ROS2 Humble" />
+  <img src="https://img.shields.io/badge/MoveIt2-2.0-brightgreen" alt="MoveIt2 2.0" />
+</p>
+
+**Live Demo:** [https://ptg-forge.netlify.app](https://ptg-forge.netlify.app)
+
+An AI-powered prompt-to-Gazebo tool that lets users generate complete ROS2/Gazebo simulation environments—including `.world`, `.urdf`, and `.launch.py` files—using natural language prompts. Perfect for rapid robot cell prototyping in manufacturing and robotics engineering.
 
 ---
 
 ## Features
 
-- Natural language to `.world` scene generation
-- Prompt-based URDF creation for Fanuc robots and other components
-- Auto-generation of ROS2 `.launch.py` files
-- One-click export of all config files in a ZIP bundle
-- Simple, professional web UI with real-time generation
+* **Natural Language Scene Generation**: Describe your simulation in plain English
+* **Prompt-based URDF Creation**: Generate URDFs for Fanuc and other robots
+* **Auto-generation of ROS2 Launch Files**: Instantly create `.launch.py` files
+* **One-click Export**: Download all config files in a ZIP bundle
+* **Modern Web UI**: Real-time generation and preview
 
 ## Tech Stack
 
-- **Frontend:** Next.js, TypeScript, Tailwind CSS, shadcn/ui
-- **Backend / Logic:** Genkit for prompt interpretation, file generation templates
-- **Simulation:** ROS2, Gazebo, URDF, RViz (optional for visualization)
-- **Hosting/Deployment:** Netlify
-
----
-
-## Example Use Case
-
-> "Simulate two Fanuc LR Mate robots welding on either side of a car chassis inside a 6x6m cell."
->
-> The system generates a `.world` file with correct model placements, URDFs for the arms, and a ROS2 launch file that initializes the scene.
-
----
-
-## Target Users
-
-- Robotics engineers and developers
-- Manufacturing simulation teams
-- Students learning ROS2/Gazebo
-- Fanuc or automation companies prototyping layouts
-
----
-
-## Prerequisites
-
-- Node.js 18.18.0 or higher (recommended: Node.js 20+)
-- npm 9.0.0 or higher
-- Google AI API key for Genkit integration
+* **Frontend**: Next.js 15, TypeScript, Tailwind CSS, shadcn/ui
+* **AI Builders**: Cursor, Trae AI, Firebase Studio
+* **Backend / Logic**: GPT-4/LLM for prompt interpretation, file generation templates
+* **Simulation**: ROS2, Gazebo, URDF, RViz (optional)
+* **Hosting/Deployment**: Netlify, Firebase, HuggingFace Spaces
 
 ---
 
 ## Setup Instructions
 
-### 1. Clone the repository
+### Prerequisites
+
+* Node.js 18+
+* npm 9+
+* (Optional) ROS2/Gazebo for local simulation
+
+### Frontend Setup
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/cronenberg64/PTG-Forge.git
 cd PTG-Forge
-```
-
-### 2. Install dependencies
-
-```bash
 npm install
-```
-
-### 3. Set up environment variables
-
-```bash
 cp env.example .env.local
+npm run dev
 ```
-Edit `.env.local` and add your API keys:
+
+### Environment Variables
+
+Set your environment variables in `.env.local`:
 
 ```env
 GOOGLE_AI_API_KEY=your_google_ai_api_key_here
 NEXT_PUBLIC_APP_URL=http://localhost:9002
 ```
 
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-### 5. Open your browser
-
-Go to [http://localhost:9002](http://localhost:9002)
+For deployment (e.g., Netlify), set these in your site environment variables.
 
 ---
 
 ## Usage
 
-1. Open the web interface at `http://localhost:9002`
-2. Enter a natural language prompt describing your desired simulation environment
-3. Review the generated `.world`, `.urdf`, and `.launch.py` files
-4. Export all configuration files as a ZIP bundle
+1. **Open the web interface** at [https://ptg-forge.netlify.app](https://ptg-forge.netlify.app) or `http://localhost:9002`
+2. **Describe your simulation** using natural language:
+   ```
+   Simulate two Fanuc LR Mate robots welding on either side of a car chassis inside a 6x6m cell.
+   ```
+3. **Review the generated files**: `.world`, `.urdf`, `.launch.py`, and more
+4. **Export** all files as a ZIP bundle
 
-#### Example Prompts
+### Example Prompts
 
-- "Simulate two Fanuc LR Mate robots welding on either side of a car chassis inside a 6x6m cell."
-- "Create a scene with a single robot arm and a conveyor belt."
-- "Generate a URDF for a Fanuc M-20iA robot with a gripper."
+* "A factory floor with a Fanuc M-10iA robot arm that picks up a small red cube and places it on a conveyor belt. The simulation should run for 5 cycles."
+* "Create a scene with a single robot arm and a conveyor belt."
+* "Generate a URDF for a Fanuc M-20iA robot with a gripper."
 
 ---
 
@@ -124,37 +104,6 @@ PTG-Forge/
 
 ---
 
-## Available Scripts
-
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run typecheck` - Run TypeScript type checking
-- `npm run genkit:dev` - Start Genkit development server
-- `npm run genkit:watch` - Start Genkit with file watching
-- `npm run clean` - Clean build artifacts and dependencies
-- `npm run reinstall` - Clean and reinstall dependencies
-
----
-
-## Environment Variables
-
-Create a `.env.local` file with the following variables:
-
-```env
-# Required
-GOOGLE_AI_API_KEY=your_google_ai_api_key_here
-
-# Optional
-NEXT_PUBLIC_APP_URL=http://localhost:9002
-NEXT_PUBLIC_APP_NAME=PTG Forge
-NODE_ENV=development
-NEXT_TELEMETRY_DISABLED=1
-```
-
----
-
 ## Contributing
 
 1. Fork the repository
@@ -165,10 +114,10 @@ NEXT_TELEMETRY_DISABLED=1
 
 ### Development Guidelines
 
-- Follow TypeScript best practices
-- Write comprehensive tests
-- Update documentation for new features
-- Ensure ROS2/Gazebo compatibility
+* Follow TypeScript best practices
+* Write comprehensive tests
+* Update documentation for new features
+* Ensure ROS2/Gazebo compatibility
 
 ---
 
@@ -180,13 +129,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- **ROS** - Robot Operating System foundation
-- **Gazebo** - Robot simulation environment
-- **MoveIt** - Motion planning framework
-- **Google Gemini** - Natural language processing
-- **Firebase** - Backend infrastructure
-- **Next.js** - React framework
-- **shadcn/ui** - UI component library
+* **ROS** - Robot Operating System foundation
+* **Gazebo** - Robot simulation environment
+* **MoveIt** - Motion planning framework
+* **Google Gemini** - Natural language processing
+* **Firebase** - Backend infrastructure
+* **Next.js** - React framework
+* **shadcn/ui** - UI component library
 
 ---
 
