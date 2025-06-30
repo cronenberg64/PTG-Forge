@@ -8,10 +8,10 @@ import { generateTaskScript } from "@/ai/flows/generate-task-script";
 import { generateScenePreview } from "@/ai/flows/generate-scene-preview";
 import { useToast } from "@/hooks/use-toast";
 
-import { AppHeader } from "@/components/simverse/header";
-import { ControlPanel } from "@/components/simverse/control-panel";
-import { OutputPanel } from "@/components/simverse/output-panel";
-import { PreviewPanel } from "@/components/simverse/preview-panel";
+import { AppHeader } from "@/components/ptgverse/header";
+import { ControlPanel } from "@/components/ptgverse/control-panel";
+import { OutputPanel } from "@/components/ptgverse/output-panel";
+import { PreviewPanel } from "@/components/ptgverse/preview-panel";
 
 export type GeneratedFiles = {
   world: string;

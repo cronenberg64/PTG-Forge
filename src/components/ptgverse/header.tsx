@@ -1,6 +1,6 @@
 "use client";
 
-import { Logo } from "@/components/simverse/logo";
+import { Logo } from "@/components/ptgverse/logo";
 
 export function AppHeader() {
   return (

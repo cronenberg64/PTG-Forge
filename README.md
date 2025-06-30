@@ -15,10 +15,9 @@ AI-powered prompt-to-Gazebo tool for robotics engineers. Instantly generate comp
 ## Tech Stack
 
 - **Frontend:** Next.js, TypeScript, Tailwind CSS, shadcn/ui
-- **AI Builders:** Cursor, Trae AI, Firebase Studio
-- **Backend / Logic:** GPT-4/LLM for prompt interpretation, file generation templates
+- **Backend / Logic:** Genkit for prompt interpretation, file generation templates
 - **Simulation:** ROS2, Gazebo, URDF, RViz (optional for visualization)
-- **Hosting/Deployment:** Firebase, HuggingFace Spaces, or Replit
+- **Hosting/Deployment:** Netlify
 
 ---
 
@@ -115,7 +114,7 @@ PTG-Forge/
 │   │   ├── layout.tsx     # Root layout
 │   │   └── page.tsx       # Home page
 │   ├── components/        # React components
-│   │   ├── simverse/      # Simulation-specific components
+│   │   ├── ptgverse/      # Simulation-specific components
 │   │   └── ui/            # shadcn/ui components
 │   ├── hooks/             # Custom React hooks
 │   └── lib/               # Utility functions
@@ -188,10 +187,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Firebase** - Backend infrastructure
 - **Next.js** - React framework
 - **shadcn/ui** - UI component library
-
----
-
-Built with love by the PTG Forge Team
 
 ---
 
