@@ -12,7 +12,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf .next node_modules package-lock.json",
-    "reinstall": "npm run clean && npm install"
+    "reinstall": "npm run clean && npm install",
+    "export": "next export"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.13.0",
