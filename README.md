@@ -5,6 +5,8 @@
   <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js 15" />
   <img src="https://img.shields.io/badge/ROS2-Humble-blue" alt="ROS2 Humble" />
   <img src="https://img.shields.io/badge/MoveIt2-2.0-brightgreen" alt="MoveIt2 2.0" />
+  <img src="https://img.shields.io/badge/Gazebo-Classic-orange?logo=gazebo" alt="Gazebo Classic" />
+   
 </p>
 
 **Live Demo:** [https://ptg-forge.netlify.app](https://ptg-forge.netlify.app)
@@ -24,8 +26,7 @@ An AI-powered prompt-to-Gazebo tool that lets users generate complete ROS2/Gazeb
 ## Tech Stack
 
 * **Frontend**: Next.js 15, TypeScript, Tailwind CSS, shadcn/ui
-* **AI Builders**: Cursor, Trae AI, Firebase Studio
-* **Backend / Logic**: GPT-4/LLM for prompt interpretation, file generation templates
+* **Backend / Logic**: Gemini/genkit for prompt interpretation, file generation templates
 * **Simulation**: ROS2, Gazebo, URDF, RViz (optional)
 * **Hosting/Deployment**: Netlify, Firebase, HuggingFace Spaces
 
